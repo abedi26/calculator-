@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Js Calculator </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./cal.js"></script>
+</head>
+
+<body>
+    <div>
+        <img src="/calculator/think.png" alt="img" width="300px">
+        <div class="title">
+            <p>Calculator</p>
+        </div>
+        <div class="calculator">
+            <input type="text" class="display" id="id1" disabled>
+            <div class="row">
+                <button value="7" onclick="disply('7')">7</button>
+                <button value="8" onclick="disply('8')">8</button>
+                <button value="9" onclick="disply('9')">9</button>
+                <button value="+" onclick="disply('+')" class="operators">+</button>
+            </div>
+            <div class="row">
+                <button value="4" onclick="disply('4')">4</button>
+                <button value="5" onclick="disply('5')">5</button>
+                <button value="6" onclick="disply('6')">6</button>
+                <button value="-" onclick="disply('-')" class="operators">-</button>
+            </div>
+            <div class="row">
+                <button value="1" onclick="disply('1')">1</button>
+                <button value="2" onclick="disply('2')">2</button>
+                <button value="3" onclick="disply('3')">3</button>
+                <button value="*" onclick="disply('*')" class="operators">*</button>
+            </div>
+            <div class="row">
+                <button value="C" class="operators" onclick="clr()">C</button>
+                <button value="0" onclick="disply('0')">0</button>
+                <button value="/" onclick="disply('/')" class="operators">/</button>
+                <button value="=" class="equals" onclick="solve()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
