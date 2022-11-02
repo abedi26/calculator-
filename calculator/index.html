@@ -11,7 +11,7 @@
 <body>
 
     <div>
-        <img src="/calculator/think.png" alt="img" width="300px">
+        <img src="/think.png" alt="img" width="300px">
         <div class="title">
             <p>Calculator</p>
         </div>
@@ -40,14 +40,15 @@
                 <button value="0" onclick="disply('0')">0</button>
                 <button value="/" onclick="disply('/')" class="operators">/</button>
                 <button value="=" class="equals" onclick="solve()">=</button>
+                <button value="C" class="operator" onclick="clearHistory()" id="clear">CL</button>
             </div>
             <div class="row">
                 <div class="col-lg-12" id="historyLog">
-                    
+
                 </div>
             </div>
         </div>
-        
+
     </div>
 </body>
 

@@ -11,7 +11,11 @@ function solve() {
   let y = eval(x);
   document.getElementById("id1").value = y;
   resultData = y;
-  historyData.push({ expression: expressionData, result: resultData });
+  if (historyData.length < 20) {
+    historyData.push({ expression: expressionData, result: resultData });
+  } else {
+    null;
+  }
   showLogData();
   resultData = "";
   expressionData = "";
@@ -29,5 +33,8 @@ function showLogData() {
       " = " +
       historyData[key]["result"] +
       "<br>";
-      log.innerHTML=string;
+  log.innerHTML = string;
+}
+function clearHistory() {
+  document.getElementById("historyLog").innerHTML = " ";
 }

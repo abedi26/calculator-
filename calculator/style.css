@@ -61,6 +61,10 @@ button:hover {
   background-color: #ff9500;
   font-weight: bold;
 }
+.operator{
+  font-weight: bold;
+  background-color: aquamarine;
+}
 .equals {
   background-color: rgb(85, 84, 84);
   font-weight: bold;
