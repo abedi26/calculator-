@@ -7,10 +7,12 @@ function disply(val) {
   expressionData = val;
 }
 function solve() {
-  let x = document.getElementById("id1").value;
-  let y = eval(x);
-  document.getElementById("id1").value = y;
-  resultData = y;
+  let show = document.getElementById("id1").value;
+  expressionData = show;
+
+  let view = eval(show);
+  document.getElementById("id1").value = view;
+  resultData = view;
   if (historyData.length < 20) {
     historyData.push({ expression: expressionData, result: resultData });
   } else {
@@ -26,6 +28,7 @@ function clr() {
 function showLogData() {
   var log = document.getElementById("historyLog");
   var string = "";
+
   for (var key in historyData)
     string +=
       "" +
@@ -36,5 +39,15 @@ function showLogData() {
   log.innerHTML = string;
 }
 function clearHistory() {
+  historyData = [];
   document.getElementById("historyLog").innerHTML = " ";
 }
+$("#id1").keypress(function (e) {
+  let key = e.which;
+  let checkValues = document.getElementById("id1").value;
+
+  if (key == 13 && checkValues) {
+    // the enter key code
+    solve();
+  }
+});
